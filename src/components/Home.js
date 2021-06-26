@@ -11,8 +11,7 @@ function Home() {
             <Navbar/>
             <Content/>
             <Statistics/>
-            <Footer/>
-            
+            <Footer/>   
         </div>
     )
 }

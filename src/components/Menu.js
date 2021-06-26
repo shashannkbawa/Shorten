@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+//Styled Components
 const Top = styled.div`
 font-family: 'Poppins', sans-serif;
 font-weight: 500 ,700;
@@ -20,14 +21,12 @@ flex-direction: row;
     margin-top: 0px;
     padding-bottom: 10%;
 }
-    
 `;
 
 const NavBar = styled.div`
 display: flex;
 justify-content: start;
 flex-direction: row;
-
 @media only screen and (max-width:375px){
     display: flex;
     justify-content: start;
@@ -37,37 +36,33 @@ flex-direction: row;
     margin-right: 15px;
 }
 `;
-const Button = styled.div`
 
+const Button = styled.div`
 padding-top: 20px;
 padding-bottom: 40px ;
 padding-left: 15px;
 padding-right: 15px;
-
 color: #9e9aa7;
 border-radius: 10px;
-
 &:hover{
     color: #232127;
 }
 @media only screen and (max-width: 375px) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 20px;
-        padding-bottom:20px ;
-        
-
-        font-family: 'Poppins', sans-serif;
-font-weight: 500 ;
-font-size: 18px;
-color: white;
-  font-weight: 700;
-  margin-top: 0%;
-  width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom:20px ;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500 ;
+    font-size: 18px;
+    color: white;
+    font-weight: 700;
+    margin-top: 0%;
+    width: 100%;
     }
-
 `;
+
 const SignIn = styled.div`
 display: flex;
 justify-content: end;
@@ -75,22 +70,19 @@ margin-left: 45%;
 margin-top: 10px;
 background-color: none;
 @media only screen and (max-width: 375px) {
-   display: list-item;
-   justify-content: center;
-   align-items: center;
-   margin-left: 30px;
-   margin-right: 20px;
-   padding-left: 20px;
-   border-top-style: solid;
-  border-top-color: #9e9aa7;
-  border-top-width: 1px;
-  padding-top: 10px;
-  
-  
-
+    display: list-item;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 20px;
+    padding-left: 20px;
+    border-top-style: solid;
+    border-top-color: #9e9aa7;
+    border-top-width: 1px;
+    padding-top: 10px;
 }
-
 `;
+
 const LogIn = styled.button`
 font-family: 'Poppins', sans-serif;
 font-weight: 500 ;
@@ -117,12 +109,10 @@ border: none;
     text-align: center;
     margin-bottom: 20px;
     color: white;
-  font-weight: 700;
-   
+    font-weight: 700;
 }
-
-
 `;
+
 const SignUp = styled.button`
 font-family: 'Poppins', sans-serif;
 font-weight: 500 ;
@@ -149,29 +139,22 @@ border: none;
     margin-left: 0%;
     padding-left: 0%;
     color: white;
-  font-weight: 700;
-    
+    font-weight: 700; 
 }
-
 `;
-
-
 
 export default function Menu() {
     return (
         <Top>
-        <NavBar >
-               
-
-               <Button>Features</Button>
-               <Button>Pricing</Button>
-               <Button>Resources</Button>
-               </NavBar>
-               <SignIn>
-               <LogIn>Log In</LogIn>
-               <SignUp primary >Sign Up</SignUp>
-               </SignIn>
-            
+            <NavBar >
+                <Button>Features</Button>
+                <Button>Pricing</Button>
+                <Button>Resources</Button>
+            </NavBar>
+            <SignIn>
+                <LogIn>Log In</LogIn>
+                <SignUp primary >Sign Up</SignUp>
+            </SignIn>
         </Top>
     )
-    }    
+}

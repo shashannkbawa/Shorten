@@ -1,5 +1,7 @@
 import React from 'react'
+
 import styled from 'styled-components'
+
 import icon1 from '../images/icon-brand-recognition.svg'
 import icon2 from '../images/icon-detailed-records.svg'
 import icon3 from '../images/icon-fully-customizable.svg'
@@ -10,10 +12,10 @@ margin-top: 0px;
 background-color: #dfdfdf;
 padding-top: 100px ;
 margin-bottom: 0%;
-
 display: list-item;
 justify-content: center;
 align-items: center;
+
 @media only screen and (max-width:375px){
     display: list-item;
     list-style-type: none;
@@ -51,12 +53,17 @@ margin-bottom: 0%;
 @media only screen and (max-width:375px){
     text-align: center;
 }
+
+`;
+
+const BackgroundColour = styled.div`
+background: #dfdfdf;
+margin-bottom: 0%;
 `;
 
 const Cards = styled.div`
 display: flex;
 justify-content: center;
-
 margin-top: 0px;
 background-color: #dfdfdf;
 padding-top: 100px ;
@@ -72,7 +79,6 @@ margin-right: 10%;
     
 }
 
-
 `;
 
 const Card1 = styled.div`
@@ -81,7 +87,6 @@ margin-top: 0px;
 margin-left: 10px;
 margin-right: 20px;
 height: 300px;
-
 border-radius: 10px;
 &:hover{
     
@@ -103,7 +108,6 @@ height: 300px;
     transition: 0.3s linear;
     transform: scale(1.05);
 }
-
 
 `;
 
@@ -134,6 +138,7 @@ margin-top: -50px;
 margin-left: 20px;
 
 `;
+
 const CardHeading = styled.h2`
 font-family: 'Poppins', sans-serif;
 font-weight: 700;
@@ -143,7 +148,7 @@ color: #232127;
     margin-left: 10px;
 }
 `;
- 
+
 const CardPara = styled.p`
 font-family: 'Poppins', sans-serif;
 font-weight: 500;
@@ -157,12 +162,7 @@ margin-left: 10%;
 }
 `;
 
-const BackgroundColour = styled.div`
-background: #dfdfdf;
-margin-bottom: 0%;
 
-
-`;
 const Booster = styled.div`
 background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='250'%3E%3Cg fill='%234B3F6B' fill-rule='evenodd'%3E%3Cpath d='M830-63.482C830 19.351 854.36 78.678 944.732 117c90.371 38.321 177.686 3.352 265.277 23.4 87.59 20.048 87.59 149.195 170.077 228.671 82.486 79.476 256.405 98.781 397.82 18.15 141.415-80.632 205.52-268.896 163.267-379.902C1898.919-103.687 1817.943-205 1427.236-205S830-146.314 830-63.482zM-263.351 570.909c29.685 77.331 73.689 123.988 171.79 127.377 98.102 3.39 167.085-60.547 256.043-73.22 88.958-12.674 135.24 107.895 240.73 152.532 105.488 44.638 274.775.333 377.9-125.622C886.24 526.021 878.62 327.29 799.392 238.798 720.162 150.307 608.257 84.743 243.5 224.76c-364.757 140.017-536.537 268.818-506.852 346.149zM-514-377.482c0 82.833 24.36 142.16 114.732 180.482 90.371 38.321 177.686 3.352 265.277 23.4 87.59 20.048 87.59 149.195 170.077 228.671 82.486 79.476 256.405 98.781 397.82 18.15 141.415-80.632 205.52-268.896 163.267-379.902C554.919-417.687 473.943-519 83.236-519S-514-460.314-514-377.482z'/%3E%3C/g%3E%3C/svg%3E");
 background-color: #3b3054;
@@ -206,10 +206,10 @@ margin-top: 0px;
     text-align: center;
     margin-left: 0px;
     padding-left: 0px;
-    
-    
+  
 }
 `;
+
 const Button = styled.button`
 font-family: 'Poppins', sans-serif;
 font-weight: 500 ;
@@ -221,7 +221,6 @@ padding-right: 10px;
 margin-left: 20px;
 border: none;
 border-radius: 20px;
-
 text-align: center;
 width: 150px;
 height: 50px;
@@ -241,34 +240,34 @@ function Statistics() {
                 </Details>
             </About>
             <BackgroundColour>
-            <Cards>
-                <Card1>
-                    <CardImg src= {icon1}/>
-                    <CardHeading>Brand Recognition</CardHeading>
-                    <CardPara>Boost your brand recognition with each click. Generic
-                        links don't mean a thing. Branded links help instil confidence
-                        in your content.
-                    </CardPara>
+                <Cards>
+                    <Card1>
+                        <CardImg src={icon1} />
+                        <CardHeading>Brand Recognition</CardHeading>
+                        <CardPara>Boost your brand recognition with each click. Generic
+                            links don't mean a thing. Branded links help instil confidence
+                            in your content.
+                        </CardPara>
 
-                </Card1>
-                <Card2>
-                <CardImg src= {icon2}/>
-                <CardHeading>Detailed Records</CardHeading>
-                <CardPara>Gain insights into who is clicking your links. Knowing when and
-                    where people engage with your content helps inform better decisions.
-                </CardPara>
-
-
-                </Card2>
-                <Card3>
-                <CardImg src= {icon3}/>
-                <CardHeading>Fully Customizable</CardHeading>
-                <CardPara>Improve brand awareness and content discoverability through customizable
-                    links, supercharging audience engagement.</CardPara>
+                    </Card1>
+                    <Card2>
+                        <CardImg src={icon2} />
+                        <CardHeading>Detailed Records</CardHeading>
+                        <CardPara>Gain insights into who is clicking your links. Knowing when and
+                            where people engage with your content helps inform better decisions.
+                        </CardPara>
 
 
-                </Card3>
-            </Cards>
+                    </Card2>
+                    <Card3>
+                        <CardImg src={icon3} />
+                        <CardHeading>Fully Customizable</CardHeading>
+                        <CardPara>Improve brand awareness and content discoverability through customizable
+                            links, supercharging audience engagement.</CardPara>
+
+
+                    </Card3>
+                </Cards>
             </BackgroundColour>
             <Booster>
                 <BoosterHeading>
@@ -280,7 +279,7 @@ function Statistics() {
             </Booster>
 
         </>
-        
+
     )
 }
 

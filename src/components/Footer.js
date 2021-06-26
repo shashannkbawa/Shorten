@@ -1,4 +1,5 @@
 import React from 'react'
+
 import styled from 'styled-components'
 
 import facebook from '../images/icon-facebook.svg';
@@ -17,10 +18,10 @@ height: 300px;
     list-style-type: none;
     height: 100%;
     align-content: center;
-    justify-content: center;
-    
+    justify-content: center;  
 }
 `;
+
 const Image = styled.div`
 font-weight: 700;
 font-size: 40px;
@@ -35,8 +36,8 @@ margin-right: 13%;
     justify-content: center;
     
 }
-
 `;
+
 const ListHeading = styled.div`
 font-family: 'Poppins', sans-serif;
 font-weight: 700;
@@ -55,8 +56,8 @@ padding-left: 20px;
     margin-left: 0px;
     
 }
-
 `;
+
 const ListItem = styled.li`
 font-family: 'Poppins', sans-serif;
 list-style-type: none;
@@ -67,24 +68,28 @@ margin-top: 10px;
 &:hover{
     color: #2acfcf;
 }
-
 `;
+
 const SocialHandles = styled.div`
 margin-left: 80px;
 margin-top: 50px;
 `;
+
 const Facebook = styled.img`
 padding-left: 20px;
 &:hover{
     background-color: #2acfcf;
 }
 `;
+
 const Twitter = styled.img`
 padding-left: 20px;
 `;
+
 const Pinterest = styled.img`
 padding-left: 20px;
 `;
+
 const Instagram = styled.img`
 padding-left: 20px;
 `;
@@ -93,34 +98,32 @@ padding-left: 20px;
 function Footer() {
     return (
         <>
-        <Foot>
-            <Image>Shortly</Image>
-            <ListHeading>Features
-                <ListItem>Link Shortening</ListItem>
-                <ListItem>Branded Links</ListItem>
-                <ListItem>Analytics</ListItem>
-            </ListHeading>
-            <ListHeading>Resources
-                <ListItem>Blog</ListItem>
-                <ListItem>Developers</ListItem>
-                <ListItem>Support</ListItem>
-            </ListHeading>
-            <ListHeading>Company
-                <ListItem>About</ListItem>
-                <ListItem>Our Teams</ListItem>
-                <ListItem>Careers</ListItem>
-                <ListItem>Contact</ListItem>
-            </ListHeading>
-            <SocialHandles>
-                <Facebook src = {facebook} />
-                <Twitter src = {twitter} />
-                <Pinterest src = {pinterest} />
-                <Instagram src = {instagram} />
-                
-            </SocialHandles>
+            <Foot>
+                <Image>Shortly</Image>
+                <ListHeading>Features
+                    <ListItem>Link Shortening</ListItem>
+                    <ListItem>Branded Links</ListItem>
+                    <ListItem>Analytics</ListItem>
+                </ListHeading>
+                <ListHeading>Resources
+                    <ListItem>Blog</ListItem>
+                    <ListItem>Developers</ListItem>
+                    <ListItem>Support</ListItem>
+                </ListHeading>
+                <ListHeading>Company
+                    <ListItem>About</ListItem>
+                    <ListItem>Our Teams</ListItem>
+                    <ListItem>Careers</ListItem>
+                    <ListItem>Contact</ListItem>
+                </ListHeading>
+                <SocialHandles>
+                    <Facebook src={facebook} />
+                    <Twitter src={twitter} />
+                    <Pinterest src={pinterest} />
+                    <Instagram src={instagram} />
 
-            
-        </Foot>
+                </SocialHandles>
+            </Foot>
         </>
     )
 }
