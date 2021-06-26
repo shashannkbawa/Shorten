@@ -67,7 +67,7 @@ function Navbar() {
         return (
             <>
                 <Whole>
-                    <Image><img src={logo} /></Image>
+                    <Image><img alt = "" src={logo} /></Image>
 
                     <MenuImage src={menuImg} onClick={myMenu} />
                     {menu === true ? <Menu /> : ""}
@@ -87,7 +87,7 @@ function Navbar() {
         return (
             <Whole>
 
-                <Image><img src={logo} /></Image>
+                <Image><img alt = "" src={logo} /></Image>
 
 
 

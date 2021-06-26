@@ -1,4 +1,4 @@
-import React , {useState , useEffect}  from 'react'
+import React , {useState }  from 'react'
 
 import styled from 'styled-components'
 import image from '../images/illustration-working.svg'
@@ -275,7 +275,7 @@ function Content() {
 
         var copyText = document.getElementById("copy");
   
-        if (copyText.innerText == "Copy"){
+        if (copyText.innerText === "Copy"){
             setColourIndex(newColourIndex);
             copyText.innerText = "Copied!";
         }

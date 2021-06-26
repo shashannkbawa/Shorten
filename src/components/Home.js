@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+
 import Content from './Content'
 import Navbar from './Navbar'
 import Statistics from './Statistics'

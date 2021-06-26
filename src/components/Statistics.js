@@ -125,7 +125,7 @@ height: 300px;
 
 `;
 
-const Card_Img = styled.img`
+const CardImg = styled.img`
 display: initial;
 background-color: #3b3054;
 padding: 20px;
@@ -243,7 +243,7 @@ function Statistics() {
             <BackgroundColour>
             <Cards>
                 <Card1>
-                    <Card_Img src= {icon1}/>
+                    <CardImg src= {icon1}/>
                     <CardHeading>Brand Recognition</CardHeading>
                     <CardPara>Boost your brand recognition with each click. Generic
                         links don't mean a thing. Branded links help instil confidence
@@ -252,7 +252,7 @@ function Statistics() {
 
                 </Card1>
                 <Card2>
-                <Card_Img src= {icon2}/>
+                <CardImg src= {icon2}/>
                 <CardHeading>Detailed Records</CardHeading>
                 <CardPara>Gain insights into who is clicking your links. Knowing when and
                     where people engage with your content helps inform better decisions.
@@ -261,7 +261,7 @@ function Statistics() {
 
                 </Card2>
                 <Card3>
-                <Card_Img src= {icon3}/>
+                <CardImg src= {icon3}/>
                 <CardHeading>Fully Customizable</CardHeading>
                 <CardPara>Improve brand awareness and content discoverability through customizable
                     links, supercharging audience engagement.</CardPara>

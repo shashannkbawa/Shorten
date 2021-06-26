@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import logo from '../images/logo.svg';
+
 import facebook from '../images/icon-facebook.svg';
 import twitter from '../images/icon-twitter.svg';
 import pinterest from '../images/icon-pinterest.svg';
