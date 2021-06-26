@@ -18,8 +18,10 @@ flex-direction: row;
     flex-direction: column;
     background-color: #3b3054;
    border-radius: 10px;
-    margin-top: 0px;
+   margin-top: 0px;
+    margin-left: 30px;
     padding-bottom: 10%;
+    width: 90%;
 }
 `;
 

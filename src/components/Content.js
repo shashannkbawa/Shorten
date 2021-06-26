@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import image from '../images/illustration-working.svg'
 import Link from './Link'
 
-
+//Styled Components
 const Section = styled.section`
 margin-left: 10%;
 margin-right: 10px;

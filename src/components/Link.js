@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 function Link() {
 
-    //Styled Components
-    const Box = styled.p`
+//Styled Components
+const Box = styled.p`
 background-color: white;
 height: 100px;
 margin-top: 30px;

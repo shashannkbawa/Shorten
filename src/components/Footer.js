@@ -7,6 +7,7 @@ import twitter from '../images/icon-twitter.svg';
 import pinterest from '../images/icon-pinterest.svg';
 import instagram from '../images/icon-instagram.svg';
 
+//Styled Components
 const Foot = styled.div`
 font-family: 'Poppins', sans-serif;
 font-size: 18px;
