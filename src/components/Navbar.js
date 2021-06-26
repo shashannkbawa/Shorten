@@ -72,7 +72,6 @@ function Navbar() {
     function myMenu() {
         setMenu( !menu );
     }
-
     
 
     //To show alert on different screen width
