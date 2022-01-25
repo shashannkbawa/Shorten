@@ -68,10 +68,7 @@ function Navbar() {
     const [menu, setMenu] = useState(false)
 
    
-    //To show menu button on click
-    function myMenu() {
-        setMenu( !menu );
-    }
+   
     
 
     //To show alert on different screen width
@@ -87,7 +84,7 @@ function Navbar() {
                         <Image><img alt="" src={logo} /></Image>
                         <MenuImage src={menuImg} onClick={myMenu} />
                     </NavbarChild>
-                    {menu === true ? <Menu /> : ""}
+                    {menu === false ?  "" : <Menu /> }
                 </Whole>
             </>
         )
@@ -99,6 +96,11 @@ function Navbar() {
                 <Menu />
             </Whole>
         )
+    }
+
+     //To show menu button on click
+     function myMenu() {
+        setMenu( !menu );
     }
 }
 

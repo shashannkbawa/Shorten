@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import styled from 'styled-components'
 import image from '../images/illustration-working.svg'
-import Link from './Link'
+
 
 //Styled Components
 const Section = styled.section`
@@ -181,6 +181,10 @@ width: 100%;
     padding-left:10px;
 }
 `;
+const Link = styled.p`
+color:#232127;
+
+`;
 
 const CopyBtn = styled.button`
 height: 50px;
@@ -213,27 +217,27 @@ function Content() {
     const [link, setLink] = useState(false);
     const [selectedColourIndex, setColourIndex] = useState(0);
 
-    //To get the link from the API
-    function Shorten() {
+
+    const Shorten = async () => {
+
+
+        const res = await fetch(`https://api.shrtco.de/v2/shorten?url=${url}`)
+        const data = await res.json()
+        const shortUrl = data.result.short_link;
+        const longUrl = data.result.full_short_link;
         setLink(true)
-        var api = new URL("https://api.shrtco.de/v2/shorten"),
-            params = { url }
-        Object.keys(params).forEach(key => api.searchParams.append(key, params[key]))
-        fetch(api, {
-            method: 'GET',
-            mode: 'no-cors'
+        addResult(url, longUrl, shortUrl);
 
-        }).then(res => {
-            console.log(res)
-            return res.json()
 
-        })
-            .then(data => {
-                console.log(data)
-            })
-            .catch(e => {
-                console.error(e)
-            })
+
+    }
+    function addResult(yourUrl, longUrl, shortUrl) {
+        let parentEle = document.querySelector("#shortshort");
+        let data = `<div class="item"><div class="long-url"><div class="title font-1">Your URL</div> <p id="long-url" class="font-2"> ${yourUrl} </p></div><div class="long-url"><div class="title font-1">Long URL</div> <p id="long-url" class="font-2"> ${longUrl} </p></div><div class="short-url"><div class="title font-1">Short URL</div> <p id="short-url" class="font-2" value='${shortUrl}' >${shortUrl}</p></div></div>`;
+
+        let newEle = document.createElement("div");
+        newEle.innerHTML = data;
+        parentEle.appendChild(newEle);
     }
 
     //To copy the link into clipboard and change text to copied
@@ -242,7 +246,15 @@ function Content() {
         const newColourIndex = selectedColourIndex + 1;
         var copyText = document.getElementById("copy");
 
+
         if (copyText.innerText === "Copy") {
+            navigator.clipboard.writeText(document.getElementById('short-url').textContent).then(() => {
+                alert("successfully copied");
+            })
+                .catch(() => {
+                    alert("something went wrong");
+                });;
+
             setColourIndex(newColourIndex);
             copyText.innerText = "Copied!";
         }
@@ -271,7 +283,7 @@ function Content() {
             <NewLink>
                 {link === true ?
                     <>
-                        <Link />
+                        <Link id="shortshort" ></Link>
                         <CopyBtn type="button" id="copy" style={{ backgroundColor: colours[selectedColourIndex] }} onClick={changeCopy}>Copy</CopyBtn>
                     </>
                     : ""}
