@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import image from '../images/illustration-working.svg'
 
 
+
 //Styled Components
 const Section = styled.section`
 margin-left: 10%;
@@ -170,10 +171,9 @@ height: 50px;
 
 const NewLink = styled.div`
 background-color: #dfdfdf;
-padding-top: 10px;
 display: flex;
 justify-content: space-between;
-height: 100px;
+margin-right:20%;
 width: 100%;
 @media only screen and (max-width:375px){
     display: list-item;
@@ -183,6 +183,10 @@ width: 100%;
 `;
 const Link = styled.p`
 color:#232127;
+background-color:#BCA7E8;
+margin-left:10%;
+border-radius: 15px;
+width:70%;
 
 `;
 
@@ -191,7 +195,6 @@ height: 50px;
 margin-right: 15%;
 margin-top: 20px;
 width: 100px;
-height: 40px;
 font-family: 'Poppins', sans-serif;
 font-weight: 700 ;
 font-size: 18px;
@@ -224,20 +227,28 @@ function Content() {
         const res = await fetch(`https://api.shrtco.de/v2/shorten?url=${url}`)
         const data = await res.json()
         const shortUrl = data.result.short_link;
-        const longUrl = data.result.full_short_link;
-        setLink(true)
-        addResult(url, longUrl, shortUrl);
+
+        setLink(true);
+        addResult(url, shortUrl);
 
 
 
     }
-    function addResult(yourUrl, longUrl, shortUrl) {
+    function addResult(yourUrl, shortUrl) {
         let parentEle = document.querySelector("#shortshort");
-        let data = `<div class="item"><div class="long-url"><div class="title font-1">Your URL</div> <p id="long-url" class="font-2"> ${yourUrl} </p></div><div class="long-url"><div class="title font-1">Long URL</div> <p id="long-url" class="font-2"> ${longUrl} </p></div><div class="short-url"><div class="title font-1">Short URL</div> <p id="short-url" class="font-2" value='${shortUrl}' >${shortUrl}</p></div></div>`;
+        let data = `<div class="item"><div class="long-url"><div class="title">Your URL</div> <p id="your-url" class="font-2"> ${yourUrl} </p></div><div class="short-url"><div class="title">Short URL</div> <p id="short-url" class="font-2" value='${shortUrl}' >${shortUrl}</p></div></div>`;
 
         let newEle = document.createElement("div");
         newEle.innerHTML = data;
         parentEle.appendChild(newEle);
+        parentEle.style.height = '100%'
+        parentEle.style.fontWeight = '800'
+        parentEle.style.paddingLeft = '30px'
+        parentEle.style.display = 'flex'
+        parentEle.style.justifyContent = 'space-between'
+        parentEle.style.flexDirection = 'row'
+        parentEle.style.marginRight = '20px'
+
     }
 
     //To copy the link into clipboard and change text to copied
@@ -259,7 +270,7 @@ function Content() {
             copyText.innerText = "Copied!";
         }
         else {
-            copyText.innerText = "Copied!";
+            copyText.innerText = "Already Copied!";
             setColourIndex(1);
         }
     }
